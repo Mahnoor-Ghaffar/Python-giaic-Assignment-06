@@ -119,3 +119,27 @@ class Logger:
 log = Logger()
 del log
 
+
+
+
+# 7. Access Modifiers: Public, Private, and Protected
+# Assignment:
+# Create a class Employee with:
+
+# a public variable name,
+
+# a protected variable _salary, and
+
+# a private variable __ssn.
+
+# Try accessing all three variables from an object of the class and document what happens.
+
+class Employee:
+    def __init__(self):
+            self.name = "Ahmed"
+            self._salary = 5000
+            self.__ssn = "123-45-6789"
+
+e = Employee()
+print(e.name)
+print(e._salary)
