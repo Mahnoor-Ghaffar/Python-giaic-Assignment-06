@@ -42,6 +42,7 @@ Counter.show_count()
 
 
 
+
 # 3. Public Variables and Methods
 # Assignment:
 # Create a class Car with a public variable brand and a public method start().
@@ -58,3 +59,27 @@ class Car:
 c = Car("Toyota")
 print(c.brand)
 c.start()
+
+
+
+# 4. Class Variables and Class Methods
+# Assignment:
+# Create a class Bank with a class variable bank_name.
+# Add a class method change_bank_name(cls, name) that allows changing the bank name.
+# Show that it affects all instances.
+
+
+class Bank:
+    bank_name="State Bank"
+
+    @classmethod
+    def change_bank_name(cls,name):
+        cls.bank_name = name
+
+b1 = Bank()
+b2 = Bank()
+print(b1.bank_name)
+Bank.change_bank_name("New Bank")
+print(b2.bank_name)
+
+
