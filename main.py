@@ -221,8 +221,11 @@ d.bark()
 # Add a class method increment_book_count() to increase the count when a new book is added.
 
 class Book:
-    def __init__(self,total_books):
-        self.total_books=total_books
+    total_books = 0
 
+    @classmethod
+    def increment_book_count(cls):
+        cls.total_books +=1
 
-    def increment_book_count()
+Book.increment_book_count()
+Book.in
