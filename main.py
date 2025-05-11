@@ -246,3 +246,11 @@ print(Book.total_books)
 # Isme kisi object ka data (jaise self.temp) use nahi ho raha.
 
 # Na class variable (like cls.unit) use ho raha.
+
+
+class TemperatureConverter:
+    @staticmethod
+    def celsius_to_fahrenheit(c):
+        return (c*9/5) +32
+
+print(TemperatureConverter.celsius_to_fahrenheit(25))
