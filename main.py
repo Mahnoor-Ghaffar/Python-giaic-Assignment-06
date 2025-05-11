@@ -228,4 +228,5 @@ class Book:
         cls.total_books +=1
 
 Book.increment_book_count()
-Book.in
+Book.increment_book_count()
+print(Book.total_books)
