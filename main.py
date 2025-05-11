@@ -152,3 +152,14 @@ print(e._salary)
 # and use super() to call the base class constructor.
 
 
+class Person:
+    def __init__(self,name):
+        self.name = name
+
+class Teacher(Person):
+    def __init__(self,name,subject):
+        super().__init__(name)
+        self.subject=subject
+
+t=Teacher("Sara", "Math")
+print(t.name,t.subject)
