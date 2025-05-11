@@ -230,3 +230,19 @@ class Book:
 Book.increment_book_count()
 Book.increment_book_count()
 print(Book.total_books)
+
+
+
+# 12. Static Methods
+# Assignment:
+# Create a class TemperatureConverter with a static method celsius_to_fahrenheit(c) that returns
+# the Fahrenheit value.
+
+
+# ---------explanation
+# Humne @staticmethod is liye use kiya:
+# Kyunke temperature convert karna sirf input aur formula ka kaam hai.
+
+# Isme kisi object ka data (jaise self.temp) use nahi ho raha.
+
+# Na class variable (like cls.unit) use ho raha.
