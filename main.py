@@ -163,3 +163,34 @@ class Teacher(Person):
 
 t=Teacher("Sara", "Math")
 print(t.name,t.subject)
+
+
+
+# 09. Abstract Classes and Methods
+# Assignment:
+# Use the abc module to create an abstract class Shape with an abstract method area().
+# Inherit a class Rectangle that implements area().
+
+# ------------Explanation
+
+# --Abstract class aik aisi class hoti hai jo adhoori hoti hai — usme kuch methods sirf declare hote hain, 
+# lekin unka kaam likha nahi hota.
+# --Tum abstract class ka object nahi bana sakti — sirf usko inherit karke poora kaam child class mein likhna padta hai.
+
+from abc import  ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self,width,height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width*self.height
+
+r = Rectangle(4,5)
+print(r.area())
