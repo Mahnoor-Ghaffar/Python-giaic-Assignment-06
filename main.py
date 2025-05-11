@@ -209,3 +209,20 @@ class Dog:
 
     def bark(self):
         print(f"{self.name} is barking!")
+
+d = Dog("Bruno", "Bulldog")
+d.bark()
+
+
+
+# 11. Class Methods
+# Assignment:
+# Create a class Book with a class variable total_books.
+# Add a class method increment_book_count() to increase the count when a new book is added.
+
+class Book:
+    def __init__(self,total_books):
+        self.total_books=total_books
+
+
+    def increment_book_count()
