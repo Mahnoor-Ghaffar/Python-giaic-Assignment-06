@@ -316,5 +316,19 @@ print(d.emp.name)
 # Create an object of D and call show() to observe MRO.
 
 class A:
-    def show(self)
+    def show(self):
+        print("A")
 
+class B(A):
+    def Show(self):
+        print("B")
+
+class C(A):
+    def show(self):
+        print("C")
+
+class D(B,C):
+    pass
+
+d = D()
+d.show()
