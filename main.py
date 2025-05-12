@@ -299,4 +299,4 @@ class Department:
 
 e = Employee("Ali")
 d= Department(e)
-print(e)
+print(d.emp.name)
