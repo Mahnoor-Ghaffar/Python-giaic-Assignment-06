@@ -360,4 +360,49 @@ say_hello()
 # Apply it to a class Person.
 
 def add_greeting(cls):
-    cls.greet = lambda
+    cls.greet = lambda self: "Hello from Decorator!"
+    return cls
+
+@add_greeting
+class Person:
+    def __init__(self,name):
+        self.name = name
+
+p = Person("Ayesha")
+print(p.greet())
+
+
+# 18. Property Decorators: @property, @setter, and @deleter
+# Assignment:
+# Create a class Product with a private attribute _price.
+# Use @property to get the price, @price.setter to update it, and @price.deleter to delete it.
+
+class Product:
+    def __init__(self, price):
+        self._price = price
+
+    @property
+    def price(self):
+        return self._price
+
+    @price.setter
+    def price(self, value):
+        self._price = value
+
+    @price.deleter
+    def price(self):
+        del self._price
+
+p = Product(100)
+print(p.price)
+p.price = 150
+print(p.price)
+del p.price
+
+
+
+# 19. callable() and __call__()
+# Assignment:
+# Create a class Multiplier with an __init__() to set a factor.
+# Define a __call__() method that multiplies an input by the factor. Test it with callable() and by calling the object like a function.
+
