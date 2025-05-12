@@ -294,4 +294,9 @@ class Employee:
         self.name = name
 
 class Department:
-    def __init__(self,emp)
+    def __init__(self,emp):
+        self.emp = emp
+
+e = Employee("Ali")
+d= Department(e)
+print(e)
